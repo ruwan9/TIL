@@ -2,6 +2,32 @@
 
 
 
+## 수정사항 - React ^18.0.0
+
+새로 나온 리액트 18에서는 ReactDOM.render가 아니라, createRoot를 사용해야 한다
+
+```jsx
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
+
+const rootNode = document.getElementById('root');
+
+ReactDOM.createRoot(rootNode).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+);
+
+reportWebVitals();
+```
+
+
+
+
+
 ## 개요
 
 react는 UI 제작용 javascript Library. (Framework가 아님) 별도의 분류용 폴더를 생성할때까지는 Framework 폴더에서 관리 >> Language로 이동
