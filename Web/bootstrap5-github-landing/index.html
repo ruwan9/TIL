@@ -29,36 +29,77 @@
     <!-- CSS -->
     <link rel="stylesheet" href="./main.css" />
   </head>
-  <body>
-    <!-- HEADER TAG -->
-    <header>
-      <div class="container d-flex align-items-center py-3">
-        <a class="logo me-2" href="#">
-          <img src="./images/header-logo.svg" alt="GitHub Logo" />
-        </a>
-        <ul class="nav flex-grow-1">
-          <li class="nav-item">
-            <a href="#" class="nav-link text-light">Personal</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link text-light">Open Source</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link text-light">Business</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link text-light">Explore</a>
-          </li>
-        </ul>
 
-        <div class="forms d-flex align-items-center">
-          <input type="text" class="form-control me-2" placeholder="Search GitHub" />
-          <button class="btn btn-link text-light flex-shrink-0 me-2 text-decoration-none">
-            Sign In
-          </button>
-          <button class="btn btn-outline-light flex-shrink-0">Sign Up</button>
+  <body>
+    <!-- HERO CONTENT -->
+    <section class="hero">
+      <img class="globe" src="./images/hero-globe.jpg" alt="Globe" />
+      <img class="glow" src="./images/hero-glow.svg" alt="Glow" />
+
+      <!-- HEADER -->
+      <header>
+        <div class="container d-flex align-items-center py-3">
+          <a class="logo me-2" href="#">
+            <img src="./images/header-logo.svg" alt="GitHub Logo" />
+          </a>
+          <ul class="nav flex-grow-1">
+            <li class="nav-item">
+              <a href="#" class="nav-link text-light">Personal</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link text-light">Open Source</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link text-light">Business</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link text-light">Explore</a>
+            </li>
+          </ul>
+
+          <div class="forms d-flex align-items-center">
+            <input type="text" class="form-control me-2" placeholder="Search GitHub" />
+            <button class="btn btn-link text-light flex-shrink-0 me-2 text-decoration-none">
+              Sign In
+            </button>
+            <button class="btn btn-outline-light flex-shrink-0">Sign Up</button>
+          </div>
+        </div>
+      </header>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-7">
+            <div class="headline">
+              <h1 class="text-white">Where the world builds software</h1>
+              <p class="text-white-50">
+                Millions of developers and companies build, ship, and maintain their software on
+                GitHub—the largest and most advanced development platform in the world.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-5">
+            <form>
+              <input
+                type="text"
+                class="form-control form-control-lg mb-3"
+                placeholder="Email Address"
+              />
+              <input
+                type="password"
+                class="form-control form-control-lg mb-3"
+                placeholder="Password"
+              />
+              <div class="d-grid">
+                <button class="btn btn-primary btn-lg">Sign up for GitHub</button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
-    </header>
+      <img class="curve" src="./images/curve.svg" alt="Curve" />
+    </section>
   </body>
 </html>
