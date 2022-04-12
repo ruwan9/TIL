@@ -1,4 +1,20 @@
+/* BODY */
 body {
   font-family: "Poppins", sans-serif;
   font-weight: 300;
 }
+
+/* HEADER */
+header {
+  background-color: #040d22;
+}
+header .forms input.form-control {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+header .forms input.form-control::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* HERO CONTENTS */
