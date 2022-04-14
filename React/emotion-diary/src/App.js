@@ -120,7 +120,7 @@ function App() {
         <MyButton text={"버튼"} onClick={() => alert("버튼 클릭")} type={"negative"} /> */}
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/edit" element={<Edit />} />
+              <Route path="/edit/:id" element={<Edit />} />
               <Route path="/new" element={<New />} />
               <Route path="/diary/:id" element={<Diary />} />
             </Routes>

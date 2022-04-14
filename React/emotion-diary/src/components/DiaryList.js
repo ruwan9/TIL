@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import DiaryItem from "./DiaryItem";
 import MyButton from "./MyButton";
 
 // 정렬 옵션
@@ -73,11 +74,8 @@ function DiaryList({ diaryList }) {
           <MyButton type={"positive"} text={"새 일기쓰기"} onClick={() => navigate("/new")} />
         </div>
       </div>
-
       {getProcessedDiaryList().map((it) => (
-        <div key={it.id}>
-          {it.content} {it.emotion}
-        </div>
+        <DiaryItem key={it.id} {...it} />
       ))}
     </div>
   );
