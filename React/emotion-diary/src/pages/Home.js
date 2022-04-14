@@ -14,8 +14,8 @@ function Home() {
   useEffect(() => {
     if (diaryList.length >= 1) {
       const firstDay = new Date(curDate.getFullYear(), curDate.getMonth(), 1).getTime();
-      const lastDay = new Date(curDate.getFullYear(), curDate.getMonth() + 1, 0);
-
+      const lastDay = new Date(curDate.getFullYear(), curDate.getMonth() + 1, 0).getTime();
+      // 해당 월에 작성된 일기만 filter
       setData(diaryList.filter((it) => firstDay <= it.date && it.date <= lastDay));
     }
   }, [diaryList, curDate]);

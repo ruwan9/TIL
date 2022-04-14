@@ -35,13 +35,17 @@ function DiaryList({ diaryList }) {
   const [filter, setFilter] = useState("all");
 
   const getProcessedDiaryList = () => {
+    // 작성 시간 기준 정렬 비교
     const compare = (a, b) => {
       if (sortType === "latest") {
+        // 최신 순 정렬
         return parseInt(b.date) - parseInt(a.date);
       } else {
+        // 오래된 순 정렬
         return parseInt(a.date) - parseInt(b.date);
       }
     };
+    // 감정 점수 기준 정렬 비교
     const filterCallback = (item) => {
       if (filter === "good") {
         return parseInt(item.emotion) <= 3;
@@ -53,8 +57,9 @@ function DiaryList({ diaryList }) {
     // Deep Copy
     const copyList = JSON.parse(JSON.stringify(diaryList));
 
+    // 1. 감정 점수 기준 정렬
     const filteredList = filter === "all" ? copyList : copyList.filter((it) => filterCallback(it));
-
+    // 2. 작성 시간 기준 정렬
     const sortedList = filteredList.sort(compare);
 
     return sortedList;
@@ -64,7 +69,6 @@ function DiaryList({ diaryList }) {
     <div className="DiaryList">
       <div className="menu_wrapper">
         <div className="left_col">
-          {" "}
           {/* 정렬 기준 */}
           <ControlMenu value={sortType} onChange={setSortType} optionList={sortOptionList} />
           {/* 감정 기준 */}
