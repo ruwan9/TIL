@@ -2,6 +2,22 @@
 
 
 
+## useReducer
+
+: 복잡한 상태 관리가 필요한 컴포넌트에 사용되는 hook
+
+```jsx
+const [<상태 객체>, <dispatch 함수>] = useReducer(<reducer 함수>, <초기 상태>, <초기 함수>)
+```
+
+- 현재 상태(state)객체와 행동(action)객체를 인자로 받아 새로운 상태 객체를 반환한다.
+- `state`: 앞으로 컴포넌트에서 사용 할 수 있는 상태
+- `dispatch`: 액션을 발생시키는 함수
+  - `dispatch({ type: 'INCREMENT' })` 형태로 사용
+- `useReducer`에 넣는 첫번째 파라미터는 `reducer 함수`, 두번째 파라미터는 `초기 상태`
+
+
+
 ## 시간 / 날짜 관련
 
 ```jsx
