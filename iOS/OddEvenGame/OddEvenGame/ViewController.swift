@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
     @IBOutlet var computerBallCountLbl: UILabel!
@@ -14,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet var imageContainer: UIView!
     @IBOutlet var fistImage: UIImageView!
     
+    var player: AVAudioPlayer?
     var comBallsCount: Int = 20
     var userBallsCount: Int = 20
     
@@ -25,12 +27,36 @@ class ViewController: UIViewController {
         userBallCountLbl.text = String(userBallsCount)
         
         self.imageContainer.isHidden = true
+        
+        self.play(fileName: "intro")
+    }
+    
+    func play(fileName: String) {
+        let filePath = Bundle.main.url(forResource: fileName, withExtension: "mp3")
+    
+        guard let path = filePath else {
+            return
+        }
+//        self.player = try? AVAudioPlayer(contentsOf: path)
+        do {
+            self.player = try AVAudioPlayer(contentsOf: path)
+            guard let soundPlayer = self.player else {
+                return
+            }
+            soundPlayer.prepareToPlay()
+            soundPlayer.play()
+        } catch let error {
+            print("\(error.localizedDescription)")
+        }
     }
     
     @IBAction func gameStartPressed(_ sender: Any) {
         print("게임 시작!")
         
         self.imageContainer.isHidden = false
+        
+        self.play(fileName: "gamestart")
+        
         // 애니메이션
         UIView.animate(withDuration: 3.0){
             self.fistImage.transform = CGAffineTransform(scaleX: 5, y: 5)
@@ -48,6 +74,7 @@ class ViewController: UIViewController {
         
         let oddBtn = UIAlertAction.init(title: "홀", style: .default) {_ in
             print("홀 버튼 클릭")
+            self.play(fileName: "click")
             guard let input = alert.textFields?.first?.text, let value = Int(input) else {
                 return
             }
@@ -56,6 +83,7 @@ class ViewController: UIViewController {
         
         let evenBtn = UIAlertAction.init(title: "짝", style: .default) {_ in
             print("짝 버튼 클릭")
+            self.play(fileName: "click")
             guard let input = alert.textFields?.first?.text, let value = Int(input) else {
                 return
             }
