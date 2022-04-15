@@ -190,6 +190,9 @@
                             <constraint firstItem="Dac-Tr-eM7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="obK-Os-arc"/>
                             <constraint firstItem="to8-8v-bPy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ygh-gQ-6mR"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="0Au-7C-4Bw" appends="YES" id="4lg-jG-KUQ"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Tasks" image="checkmark.circle.fill" catalog="system" id="zan-H5-GGu"/>
                     <connections>
@@ -201,6 +204,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="0Au-7C-4Bw">
+                    <connections>
+                        <action selector="tapBG:" destination="BYZ-38-t0r" id="w8x-s2-C9i"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-297.10144927536237" y="1603.7946428571429"/>
         </scene>
