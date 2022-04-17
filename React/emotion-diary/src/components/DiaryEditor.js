@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef, useState } from "react";
+import React, { useCallback, useContext, useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { DiaryDispatchContext } from "../App";
 import { getStringDate } from "../util/date";
@@ -51,9 +51,9 @@ function DiaryEditor({ isEdit, originData }) {
   const [content, setContent] = useState("");
   const contentRef = useRef();
 
-  const handleClickEmote = (emotion) => {
+  const handleClickEmote = useCallback((emotion) => {
     setEmotion(emotion);
-  };
+  }, []);
   const handleSubmit = () => {
     if (content.length < 1) {
       contentRef.current.focus();

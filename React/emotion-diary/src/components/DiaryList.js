@@ -15,7 +15,7 @@ const filterOptionList = [
 ];
 
 // 정렬 Component
-const ControlMenu = ({ value, onChange, optionList }) => {
+const ControlMenu = React.memo(({ value, onChange, optionList }) => {
   return (
     <select className="ControlMenu" value={value} onChange={(e) => onChange(e.target.value)}>
       {optionList.map((it, idx) => (
@@ -25,7 +25,7 @@ const ControlMenu = ({ value, onChange, optionList }) => {
       ))}
     </select>
   );
-};
+});
 
 function DiaryList({ diaryList }) {
   const navigate = useNavigate();
