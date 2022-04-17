@@ -1,4 +1,4 @@
-import React, { useReducer, useRef } from "react";
+import React, { useEffect, useReducer, useRef } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 
@@ -37,6 +37,8 @@ const reducer = (state, action) => {
     default:
       return state;
   }
+  // localStorage에 저장
+  localStorage.setItem("diary", JSON.stringify(newState));
   return newState;
 };
 
@@ -77,7 +79,18 @@ const dummyData = [
 ];
 
 function App() {
-  const [data, dispatch] = useReducer(reducer, dummyData);
+  const [data, dispatch] = useReducer(reducer, []);
+
+  useEffect(() => {
+    const localData = localStorage.getItem("diary");
+    if (localData) {
+      const diaryList = JSON.parse(localData).sort((a, b) => parseInt(a.id) - parseInt(b.id));
+      dataId.current = parseInt(diaryList[0].id) + 1;
+
+      dispatch({ type: "INIT", data: diaryList });
+    }
+  }, []);
+
   // const dataId = useRef(0);
   const dataId = useRef(6); // 'Encountered two children with the same key' 에러 발생을 해결하기 위해 더미데이터 이후 숫자부터 dataId 시작
   // CREATE

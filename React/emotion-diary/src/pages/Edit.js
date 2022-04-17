@@ -24,7 +24,6 @@ function Edit() {
 
   return (
     <div>
-      <h2>Edit</h2>
       <div>{originData && <DiaryEditor isEdit={true} originData={originData} />}</div>
     </div>
   );
