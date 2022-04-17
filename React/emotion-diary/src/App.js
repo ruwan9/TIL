@@ -78,7 +78,8 @@ const dummyData = [
 
 function App() {
   const [data, dispatch] = useReducer(reducer, dummyData);
-  const dataId = useRef(0);
+  // const dataId = useRef(0);
+  const dataId = useRef(6); // 'Encountered two children with the same key' 에러 발생을 해결하기 위해 더미데이터 이후 숫자부터 dataId 시작
   // CREATE
   const onCreate = (date, content, emotion) => {
     dispatch({
