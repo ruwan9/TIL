@@ -13,6 +13,11 @@ function Diary() {
   const [data, setData] = useState();
 
   useEffect(() => {
+    const titleElement = document.getElementsByTagName("title")[0];
+    titleElement.innerHTML = `감정 일기장 - ${id}번 일기`;
+  }, []);
+
+  useEffect(() => {
     if (diaryList.length >= 1) {
       // targetDiary 찾아오기
       const targetDiary = diaryList.find((it) => parseInt(it.id) === parseInt(id));

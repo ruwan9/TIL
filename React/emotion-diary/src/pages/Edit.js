@@ -9,6 +9,11 @@ function Edit() {
   const [originData, setOriginData] = useState();
   const diaryList = useContext(DiaryStateContext);
 
+  useEffect(() => {
+    const titleElement = document.getElementsByTagName("title")[0];
+    titleElement.innerHTML = `감정 일기장 - ${id}번 일기 수정`;
+  }, []);
+
   // 수정하려는 글의 번호 찾기
   useEffect(() => {
     if (diaryList.length >= 1) {
