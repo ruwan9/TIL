@@ -8,6 +8,10 @@ yarn add moment-timezone
 
 <!-- Dayjs -->
 yarn add dayjs
+
+<!-- date-fns -->
+yarn add date-fns
+yarn add date-fns-tz
 ```
 
 ## Moment
@@ -19,3 +23,8 @@ yarn add dayjs
 
 - 가볍다.
 - 간단한 기능을 적용할 때 용이하다.
+
+## date-fns
+
+- 포괄적이다.
+- 함수 별 import가 가능하다.
