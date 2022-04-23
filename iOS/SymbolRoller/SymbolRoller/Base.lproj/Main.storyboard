@@ -8,16 +8,41 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Symbol Roller View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SymbolRoller" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SymbolRollerViewController" customModule="SymbolRoller" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="190" translatesAutoresizingMaskIntoConstraints="NO" id="Zu1-qJ-pzt">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Zu1-qJ-pzt">
                                 <rect key="frame" x="0.0" y="44" width="390" height="766"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SbN-tm-SDO">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="586"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DgU-nL-Xm5">
+                                        <rect key="frame" x="0.0" y="586" width="390" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="RuI-Af-bJ9"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="beF-sn-a6D">
+                                        <rect key="frame" x="0.0" y="686" width="390" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="EVw-N4-oEe"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8cH-QQ-7wK"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -29,6 +54,11 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Zu1-qJ-pzt" secondAttribute="trailing" id="udL-Vn-aGx"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="button" destination="beF-sn-a6D" id="8BL-OH-ETT"/>
+                        <outlet property="imageView" destination="SbN-tm-SDO" id="j2c-u0-OhZ"/>
+                        <outlet property="label" destination="DgU-nL-Xm5" id="DYC-3f-hMz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
