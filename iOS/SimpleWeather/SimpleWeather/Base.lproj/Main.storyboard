@@ -218,6 +218,9 @@
                                                     <color key="baseForegroundColor" systemColor="systemTealColor"/>
                                                     <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="changeButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wen-Fx-1hm"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -239,6 +242,11 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="y2N-MY-1N3" secondAttribute="bottom" id="kij-62-c1k"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cityLabel" destination="MJ1-LZ-4Ms" id="GFu-eZ-bSs"/>
+                        <outlet property="temperatureLabel" destination="zNa-CA-PNK" id="1zh-Vy-fqg"/>
+                        <outlet property="weatherImageView" destination="rlm-u3-Car" id="WJG-eX-qmg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

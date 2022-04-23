@@ -9,21 +9,27 @@ import UIKit
 
 class WeatherViewController: UIViewController {
 
+    @IBOutlet weak var cityLabel: UILabel!
+    @IBOutlet weak var weatherImageView: UIImageView!
+    @IBOutlet weak var temperatureLabel: UILabel!
+    
+    let cities: [String] = ["Seoul", "Tokyo", "LA", "Seattle"]
+    let weathers: [String] = ["cloud.fill", "sun.max.fill", "wind", "cloud.sun.rain.fill"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+   
+    @IBAction func changeButtonTapped(_ sender: Any) {
+        let city = cities.randomElement()!
+        let weather = weathers.randomElement()!
+        let temp = Int.random(in: 10..<30)
+        
+        cityLabel.text = city
+        weatherImageView.image = UIImage(systemName: weather)?.withRenderingMode(.alwaysOriginal)
+        temperatureLabel.text = "\(temp)°"
     }
-    */
-
+    
 }
