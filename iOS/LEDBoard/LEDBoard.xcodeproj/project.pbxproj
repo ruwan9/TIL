@@ -13,6 +13,7 @@
 		47239FAE2814645800D6FA74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47239FAC2814645800D6FA74 /* Main.storyboard */; };
 		47239FB02814645A00D6FA74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47239FAF2814645A00D6FA74 /* Assets.xcassets */; };
 		47239FB32814645A00D6FA74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47239FB12814645A00D6FA74 /* LaunchScreen.storyboard */; };
+		47EFDC482814685500001B7C /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EFDC472814685500001B7C /* SettingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		47239FAF2814645A00D6FA74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		47239FB22814645A00D6FA74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		47239FB42814645A00D6FA74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47EFDC472814685500001B7C /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				47239FAF2814645A00D6FA74 /* Assets.xcassets */,
 				47239FB12814645A00D6FA74 /* LaunchScreen.storyboard */,
 				47239FB42814645A00D6FA74 /* Info.plist */,
+				47EFDC472814685500001B7C /* SettingViewController.swift */,
 			);
 			path = LEDBoard;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 				47239FAB2814645800D6FA74 /* ViewController.swift in Sources */,
 				47239FA72814645800D6FA74 /* AppDelegate.swift in Sources */,
 				47239FA92814645800D6FA74 /* SceneDelegate.swift in Sources */,
+				47EFDC482814685500001B7C /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
