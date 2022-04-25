@@ -23,7 +23,6 @@ class ViewController: UIViewController, LEDBoardSettingDelegate {
             settingViewController.ledText = self.contentLabel.text
             settingViewController.textColor = self.contentLabel.textColor
             settingViewController.backgroundColor = self.view.backgroundColor ?? .black
-            
         }
     }
 
