@@ -91,6 +91,10 @@
                                                 <constraint firstAttribute="bottom" secondItem="jRa-nu-7A8" secondAttribute="bottom" constant="12" id="n5N-RC-UEh"/>
                                                 <constraint firstItem="4Ol-Eh-zQx" firstAttribute="top" secondItem="szg-8u-hsi" secondAttribute="top" constant="12" id="x4H-OM-83e"/>
                                             </constraints>
+                                            <connections>
+                                                <outlet property="dateLabel" destination="jRa-nu-7A8" id="PtP-O6-e8I"/>
+                                                <outlet property="titleLabel" destination="4Ol-Eh-zQx" id="gPw-ha-HLY"/>
+                                            </connections>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="180" height="200"/>
                                     </collectionViewCell>
@@ -189,8 +193,18 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="일기 작성" id="zOP-ST-hby">
-                        <barButtonItem key="rightBarButtonItem" title="등록" id="p6P-TE-JQI"/>
+                        <barButtonItem key="rightBarButtonItem" title="등록" id="p6P-TE-JQI">
+                            <connections>
+                                <action selector="tapConfirmButton:" destination="52K-6c-at5" id="cGK-kX-ezd"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="confirmButton" destination="p6P-TE-JQI" id="7pp-Eb-JFz"/>
+                        <outlet property="contentTextView" destination="flM-Zf-3oy" id="nTW-9t-Q1h"/>
+                        <outlet property="dateTextField" destination="Wna-bx-BaE" id="xPk-xc-11d"/>
+                        <outlet property="titleTextField" destination="hdp-Rp-9Zh" id="53v-nj-7sd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VH3-Uc-7JK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
