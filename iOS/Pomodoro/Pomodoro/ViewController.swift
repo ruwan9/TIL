@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AudioToolbox
 
 enum TimerStatus {
     case start
@@ -29,7 +30,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        configureToggleButton()
+        self.configureToggleButton()
     }
     
     func setTimerInfoViewVisible(isHidden: Bool) {
@@ -47,11 +48,18 @@ class ViewController: UIViewController {
             self.timer = DispatchSource.makeTimerSource(flags: [], queue: .main)
             self.timer?.schedule(deadline: .now(), repeating: 1)
             self.timer?.setEventHandler(handler: {[weak self] in
-                self?.currentSeconds -= 1
+                guard let self = self else {return}
+                self.currentSeconds -= 1
+                let hour = self.currentSeconds / 3600
+                let minute = (self.currentSeconds % 3600) / 60
+                let second = (self.currentSeconds % 3600) % 60
+
+                self.timerLabel.text = String(format: "%02d:%02d:%02d", hour, minute, second)
+                self.progressView.progress = Float(self.currentSeconds) / Float(self.duration)
                 
-                if self?.currentSeconds ?? 0 <= 0 {
-                    // 타이머 종료
-                    self?.stopTimer()
+                if self.currentSeconds <= 0 {
+                    self.stopTimer()
+                    AudioServicesPlaySystemSound(1005)
                 }
             })
             self.timer?.resume()
@@ -90,6 +98,7 @@ class ViewController: UIViewController {
             self.cancelButton.isEnabled = true
             self.setTimerInfoViewVisible(isHidden: false)
             self.datePicker.isHidden = true
+            self.startTimer()
             
         case .start:
             self.timerStatus = .pause
