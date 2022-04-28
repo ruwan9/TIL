@@ -35,13 +35,13 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6gn-BR-2Eh">
                                         <rect key="frame" x="149.33333333333334" y="0.0" width="43.333333333333343" height="62"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="서울" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9fd-eq-kBs">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="서울" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9fd-eq-kBs">
                                                 <rect key="frame" x="0.0" y="0.0" width="43.333333333333336" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="맑음" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m5N-Yj-5Qh">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="맑음" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m5N-Yj-5Qh">
                                                 <rect key="frame" x="0.0" y="38" width="43.333333333333336" height="24"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <nil key="textColor"/>
@@ -98,8 +98,9 @@
                         <outlet property="cityNameTextField" destination="BOB-8m-nsM" id="KF2-fS-qL9"/>
                         <outlet property="maxTempLabel" destination="xQ1-38-G5E" id="y0K-ei-p62"/>
                         <outlet property="minTempLabel" destination="WAz-S6-8hr" id="pDC-nb-QhK"/>
-                        <outlet property="tempLabel" destination="koJ-gH-PGg" id="hg4-mE-k9r"/>
+                        <outlet property="tempLabel" destination="Gpn-yt-xpD" id="7g0-pY-Djt"/>
                         <outlet property="weatherDescriptionLabel" destination="m5N-Yj-5Qh" id="4f9-GP-BW9"/>
+                        <outlet property="weatherStackView" destination="Vbc-Hz-V7D" id="hpU-GA-hqw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
