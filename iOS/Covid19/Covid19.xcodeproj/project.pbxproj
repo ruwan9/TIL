@@ -13,6 +13,7 @@
 		47ACD7C7281BB64E005C3D63 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47ACD7C5281BB64E005C3D63 /* Main.storyboard */; };
 		47ACD7C9281BB650005C3D63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47ACD7C8281BB650005C3D63 /* Assets.xcassets */; };
 		47ACD7CC281BB650005C3D63 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47ACD7CA281BB650005C3D63 /* LaunchScreen.storyboard */; };
+		47ACD7D4281BB96A005C3D63 /* CovidDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47ACD7D3281BB96A005C3D63 /* CovidDetailViewController.swift */; };
 		A6D4EA2F271D949BFE355462 /* Pods_Covid19.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A20799651A6319AB6F70DCF /* Pods_Covid19.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		47ACD7C8281BB650005C3D63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		47ACD7CB281BB650005C3D63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		47ACD7CD281BB650005C3D63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47ACD7D3281BB96A005C3D63 /* CovidDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidDetailViewController.swift; sourceTree = "<group>"; };
 		C5E40CE6D61F0B2ABAD4CC0A /* Pods-Covid19.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Covid19.release.xcconfig"; path = "Target Support Files/Pods-Covid19/Pods-Covid19.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -56,7 +58,6 @@
 				39E8F9CC900B19DB20B088C0 /* Pods-Covid19.debug.xcconfig */,
 				C5E40CE6D61F0B2ABAD4CC0A /* Pods-Covid19.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -88,6 +89,7 @@
 				47ACD7C8281BB650005C3D63 /* Assets.xcassets */,
 				47ACD7CA281BB650005C3D63 /* LaunchScreen.storyboard */,
 				47ACD7CD281BB650005C3D63 /* Info.plist */,
+				47ACD7D3281BB96A005C3D63 /* CovidDetailViewController.swift */,
 			);
 			path = Covid19;
 			sourceTree = "<group>";
@@ -208,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				47ACD7C4281BB64E005C3D63 /* ViewController.swift in Sources */,
+				47ACD7D4281BB96A005C3D63 /* CovidDetailViewController.swift in Sources */,
 				47ACD7C0281BB64E005C3D63 /* AppDelegate.swift in Sources */,
 				47ACD7C2281BB64E005C3D63 /* SceneDelegate.swift in Sources */,
 			);

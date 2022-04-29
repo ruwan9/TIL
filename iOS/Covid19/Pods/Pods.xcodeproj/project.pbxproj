@@ -396,7 +396,7 @@
 		9B91CC145D7A5B54484D55DCDAF10FCB /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
 		9BEFCF57DAC94043CD6A38069E7C1058 /* Pods-Covid19-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Covid19-frameworks.sh"; sourceTree = "<group>"; };
 		9D70A0E5ABBBFEC11C799C4A87462242 /* URLRequest+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URLRequest+Alamofire.swift"; path = "Source/URLRequest+Alamofire.swift"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9DCB1CC2F4FB65DF7BB23DD1DCD40DC7 /* CandleChartDataEntry.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CandleChartDataEntry.swift; path = Source/Charts/Data/Implementations/Standard/CandleChartDataEntry.swift; sourceTree = "<group>"; };
 		9DEC839CC07D936091FBC4E3B99CBC0B /* Description.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Description.swift; path = Source/Charts/Components/Description.swift; sourceTree = "<group>"; };
 		9E87CFBFBA53B293CB217B87B8D0C2E1 /* Renderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Renderer.swift; path = Source/Charts/Renderers/Renderer.swift; sourceTree = "<group>"; };
@@ -609,18 +609,17 @@
 				FDCDA1E090B717495F0C8CB602B6AF9F /* Validation.swift */,
 				8B9395934CAB8B3A7CD4A501C5D440C8 /* Support Files */,
 			);
-			name = Alamofire;
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
-		59883CCDFD1B4AE935A6D34C91270E45 /* Pods */ = {
+		59883CCDFD1B4AE935A6D34C91270E45 /* I */ = {
 			isa = PBXGroup;
 			children = (
 				420B83D9C76D752CA5CA4D422AE3E128 /* Alamofire */,
 				67B400557CF0A963DE6CFDADCFA94E8A /* Charts */,
 				5A728DADCBEC9C88E1A571A6788D3404 /* SwiftAlgorithms */,
 			);
-			name = Pods;
+			name = I;
 			sourceTree = "<group>";
 		};
 		5A728DADCBEC9C88E1A571A6788D3404 /* SwiftAlgorithms */ = {
@@ -652,7 +651,6 @@
 				1F116B82D396B2A02FC89E211C02EEE2 /* Windows.swift */,
 				9AE5FF87D159996BB9CE221C7715F2C6 /* Support Files */,
 			);
-			name = SwiftAlgorithms;
 			path = SwiftAlgorithms;
 			sourceTree = "<group>";
 		};
@@ -671,7 +669,6 @@
 				9C87851F1022DB4F9D482E6091C9D472 /* Core */,
 				990731D26AC3387865C14416245E450E /* Support Files */,
 			);
-			name = Charts;
 			path = Charts;
 			sourceTree = "<group>";
 		};
@@ -881,7 +878,7 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
-				59883CCDFD1B4AE935A6D34C91270E45 /* Pods */,
+				59883CCDFD1B4AE935A6D34C91270E45 /* I */,
 				23F9C37D6F8D2D957A5369180309447C /* Products */,
 				A79D862CE3D0B1725526117BA91C0627 /* Targets Support Files */,
 			);
