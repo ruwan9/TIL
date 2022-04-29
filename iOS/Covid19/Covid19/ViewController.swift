@@ -50,11 +50,11 @@ class ViewController: UIViewController {
                     }
                 case let .failure(error):
                     completionHandler(.failure(error))
-                }
-            })
-        }
-        
+            }
+        })
     }
-
+    
 }
+
+
 
