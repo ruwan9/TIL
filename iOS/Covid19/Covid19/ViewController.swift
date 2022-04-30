@@ -21,6 +21,7 @@ class ViewController: UIViewController {
         
         self.fetchCovidOverview(completionHandler: {[weak self] result in
             guard let self = self else {return}
+            
             switch result {
             case let .success(result):
                 print("Success \(result)")
