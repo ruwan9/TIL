@@ -27,7 +27,6 @@ class ViewController: UIViewController {
                 print("Success \(result)")
             case let .failure(error):
                 print("Failure \(error)")
-                
             }
         } )
     }
