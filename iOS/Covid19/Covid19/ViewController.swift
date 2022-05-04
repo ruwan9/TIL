@@ -24,11 +24,51 @@ class ViewController: UIViewController {
             
             switch result {
             case let .success(result):
-                print("Success \(result)")
+                self.configureStackView(koreaCovidOverview: result.korea)
+                let covidOverviewList = self.makeCovidOverviewList(cityCovidOverview: result)
+                self.configureChartView(covidOverviewList: covidOverviewList)
             case let .failure(error):
                 print("Failure \(error)")
             }
         } )
+    }
+    
+    func makeCovidOverviewList(cityCovidOverview: CityCovidOverview) -> [CovidOverview] {
+        return [
+            cityCovidOverview.seoul,
+            cityCovidOverview.busan,
+            cityCovidOverview.daegu,
+            cityCovidOverview.incheon,
+            cityCovidOverview.gwangju,
+            cityCovidOverview.daejeon,
+            cityCovidOverview.ulsan,
+            cityCovidOverview.sejong,
+            cityCovidOverview.gyeonggi,
+            cityCovidOverview.chungbuk,
+            cityCovidOverview.chungnam,
+            cityCovidOverview.gyeongnam,
+            cityCovidOverview.jeju,
+        ]
+    }
+    
+    func configureChartView(covidOverviewList: [CovidOverview]) {
+        let entries = covidOverviewList.compactMap{[weak self] overview -> PieChartDataEntry? in guard let self = self else {return nil}
+           return PieChartDataEntry(value: self.removeFormatString(string: overview.newCase), label: overview.countryName, data: overview)
+        }
+        let dataSet = PieChartDataSet(entries: entries, label: "코로나 발생 현황")
+        dataSet.sliceSpace = 1
+        self.pieChartView.data = PieChartData(dataSet: dataSet)
+    }
+    
+    func removeFormatString(string: String) -> Double {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        return formatter.number(from: string)?.doubleValue ?? 0
+    }
+    
+    func configureStackView(koreaCovidOverview: CovidOverview) {
+        self.totalCaseLabel.text = "\(koreaCovidOverview.totalCase)명"
+        self.newCaseLabel.text = "\(koreaCovidOverview.newCase)명"
     }
 
     func fetchCovidOverview(completionHandler: @escaping (Result<CityCovidOverview, Error>) -> Void) {
