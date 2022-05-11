@@ -32,7 +32,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Nk0-4J-8O5">
+                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Nk0-4J-8O5">
                                 <rect key="frame" x="24" y="112.00000000000001" width="342" height="60.666666666666671"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="NTh-Xp-Beh">
@@ -71,10 +71,13 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U5D-ME-U6u" customClass="PieChartView" customModule="Charts">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U5D-ME-U6u" customClass="PieChartView" customModule="Charts">
                                 <rect key="frame" x="24" y="196.66666666666669" width="342" height="589.33333333333326"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="tPK-Lj-gQC">
+                                <rect key="frame" x="185" y="412" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -83,13 +86,17 @@
                             <constraint firstItem="Nk0-4J-8O5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="Euk-yU-43R"/>
                             <constraint firstItem="Nk0-4J-8O5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="Wrj-xE-cdw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="U5D-ME-U6u" secondAttribute="trailing" constant="24" id="i4b-Ig-Jg1"/>
+                            <constraint firstItem="tPK-Lj-gQC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oMe-aD-Loq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="U5D-ME-U6u" secondAttribute="bottom" constant="24" id="oo3-aZ-BSJ"/>
                             <constraint firstItem="U5D-ME-U6u" firstAttribute="top" secondItem="Nk0-4J-8O5" secondAttribute="bottom" constant="24" id="pV1-F3-vLc"/>
+                            <constraint firstItem="tPK-Lj-gQC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="rGm-xk-pkq"/>
                             <constraint firstItem="U5D-ME-U6u" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="wc5-RO-Mgd"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bze-0F-rfJ"/>
                     <connections>
+                        <outlet property="indicatorView" destination="tPK-Lj-gQC" id="pOL-kl-U6l"/>
+                        <outlet property="labelStackView" destination="Nk0-4J-8O5" id="VS5-Yd-YBP"/>
                         <outlet property="newCaseLabel" destination="QoJ-1C-vMT" id="68k-yW-Zle"/>
                         <outlet property="pieChartView" destination="U5D-ME-U6u" id="iNF-pa-Fvs"/>
                         <outlet property="totalCaseLabel" destination="fcs-FB-lZI" id="3Tp-nE-iBT"/>
