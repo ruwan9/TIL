@@ -89,10 +89,6 @@ function App() {
     analyser.disconnect();
     source.disconnect();
 
-    if (audioUrl) {
-      URL.createObjectURL(audioUrl); // 출력된 링크에서 녹음된 오디오 확인 가능
-    }
-
     // File 생성자를 사용해 파일로 변환
     const sound = new File([audioUrl], "soundBlob", {
       lastModified: new Date().getTime(),
@@ -104,6 +100,11 @@ function App() {
     console.log(sound); // File 정보 출력
   };
 
+  console.log(audioUrl);
+  if (audioUrl) {
+    console.log(URL.createObjectURL(audioUrl)); // 출력된 링크에서 녹음된 오디오 확인 가능
+  }
+
   const play = () => {
     const audio = new Audio(URL.createObjectURL(audioUrl)); // 😀😀😀
     audio.loop = false;
@@ -114,7 +115,12 @@ function App() {
   // 😀😀😀
   return (
     <>
-      <button onClick={onRec ? onRecAudio : offRecAudio}>녹음</button>
+      {onRec ? (
+        <button onClick={onRecAudio}>녹음</button>
+      ) : (
+        <button onClick={offRecAudio}>녹음 중지</button>
+      )}
+
       <button onClick={play} disabled={disabled}>
         재생
       </button>
