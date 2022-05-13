@@ -100,16 +100,37 @@ function App() {
     console.log(sound); // File 정보 출력
   };
 
-  console.log(audioUrl);
-  if (audioUrl) {
-    console.log(URL.createObjectURL(audioUrl)); // 출력된 링크에서 녹음된 오디오 확인 가능
-  }
+  const [audio, setAudio] = useState("");
+  const onSubmitAudioFile = useCallback(() => {
+    if (audioUrl) {
+      console.log(audioUrl);
+      console.log(URL.createObjectURL(audioUrl)); // 출력된 링크에서 녹음된 오디오 확인 가능
+      setAudio(new Audio(URL.createObjectURL(audioUrl)));
+    }
+    // File 생성자를 사용해 파일로 변환
+    const sound = new File([audioUrl], "soundBlob", {
+      lastModified: new Date().getTime(),
+      type: "audio",
+    });
+    console.log(sound); // File 정보 출력
+  }, [audioUrl]);
 
+  console.log(audio);
+
+  const [toggle, setToggle] = useState(true);
   const play = () => {
-    const audio = new Audio(URL.createObjectURL(audioUrl)); // 😀😀😀
-    audio.loop = false;
-    audio.volume = 1;
-    audio.play();
+    // const audio = new Audio(URL.createObjectURL(audioUrl)); // 😀😀😀
+    console.log(audio);
+    if (toggle) {
+      audio.loop = false;
+      audio.volume = 1;
+      audio.play();
+      setToggle(!toggle);
+    } else {
+      console.log("pause");
+      audio.pause();
+      setToggle(!toggle);
+    }
   };
 
   // 😀😀😀
@@ -120,10 +141,18 @@ function App() {
       ) : (
         <button onClick={offRecAudio}>녹음 중지</button>
       )}
-
-      <button onClick={play} disabled={disabled}>
-        재생
+      <button onClick={onSubmitAudioFile} disabled={disabled}>
+        결과 확인
       </button>
+      {toggle ? (
+        <button onClick={play} disabled={disabled}>
+          재생
+        </button>
+      ) : (
+        <button onClick={play} disabled={disabled}>
+          정지
+        </button>
+      )}
     </>
   );
 }
