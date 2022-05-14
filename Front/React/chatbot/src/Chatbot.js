@@ -1,9 +1,14 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 // chatbot
 import ChatBot from "react-simple-chatbot";
 import { ThemeProvider } from "styled-components";
 
 function Chatbot() {
+  const navigate = useNavigate();
+  const contactAdmin = () => {
+    navigate("/userChat");
+  };
   const steps = [
     {
       id: "0",
@@ -52,6 +57,7 @@ function Chatbot() {
   return (
     <ThemeProvider theme={theme}>
       <ChatBot
+        handleEnd={contactAdmin}
         steps={steps}
         floating={true}
         headerTitle={"C;SAFY"}
