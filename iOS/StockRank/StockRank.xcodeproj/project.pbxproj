@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4766CEB7283BB14500939746 /* StockRankCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4766CEB6283BB14500939746 /* StockRankCollectionViewCell.swift */; };
 		47E042D92838F3BA00C78721 /* StockRankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E042D82838F3BA00C78721 /* StockRankViewController.swift */; };
 		944800E2280EE8ED00D7E44C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944800E1280EE8ED00D7E44C /* AppDelegate.swift */; };
 		944800E4280EE8ED00D7E44C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944800E3280EE8ED00D7E44C /* SceneDelegate.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4766CEB6283BB14500939746 /* StockRankCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockRankCollectionViewCell.swift; sourceTree = "<group>"; };
 		47E042D82838F3BA00C78721 /* StockRankViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockRankViewController.swift; sourceTree = "<group>"; };
 		944800DE280EE8ED00D7E44C /* StockRank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StockRank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		944800E1280EE8ED00D7E44C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				944800EC280EE8EE00D7E44C /* LaunchScreen.storyboard */,
 				944800EF280EE8EE00D7E44C /* Info.plist */,
 				47E042D82838F3BA00C78721 /* StockRankViewController.swift */,
+				4766CEB6283BB14500939746 /* StockRankCollectionViewCell.swift */,
 			);
 			path = StockRank;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 			files = (
 				944800E2280EE8ED00D7E44C /* AppDelegate.swift in Sources */,
 				94480116280EF1E800D7E44C /* StockModel.swift in Sources */,
+				4766CEB7283BB14500939746 /* StockRankCollectionViewCell.swift in Sources */,
 				944800E4280EE8ED00D7E44C /* SceneDelegate.swift in Sources */,
 				47E042D92838F3BA00C78721 /* StockRankViewController.swift in Sources */,
 			);
