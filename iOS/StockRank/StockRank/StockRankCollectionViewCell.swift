@@ -7,6 +7,7 @@
 
 import UIKit
 
+// Custom Cell
 class StockRankCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var rankLabel: UILabel!

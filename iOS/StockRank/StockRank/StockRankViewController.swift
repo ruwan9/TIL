@@ -16,19 +16,20 @@ class StockRankViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        collectionView.dataSource = self
+        // collectionView delegate 설정
         collectionView.delegate = self
-      
+        collectionView.dataSource = self
     }
-    
-
 }
 
+// cell에 관한 delegate
 extension StockRankViewController: UICollectionViewDataSource {
+    // 아이템의 개수
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return stockList.count
     }
 
+    // 셀 생성
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StockRankCollectionViewCell", for: indexPath) as? StockRankCollectionViewCell else {return UICollectionViewCell()}
@@ -40,11 +41,12 @@ extension StockRankViewController: UICollectionViewDataSource {
     }
 }
 
+// cell의 layout에 관한 delegate
 extension StockRankViewController: UICollectionViewDelegateFlowLayout {
+    // cell 사이즈
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        // width == collectionView
-        // height ==  80
-        
-        return CGSize(width: collectionView.bounds.width, height: 80)
+
+        let size = CGSize(width: collectionView.bounds.width, height: 80)
+        return size
     }
 }
