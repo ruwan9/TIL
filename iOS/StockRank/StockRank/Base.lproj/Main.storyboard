@@ -88,11 +88,18 @@
                                                 <constraint firstItem="bc7-fD-73J" firstAttribute="leading" secondItem="mT9-kb-CNe" secondAttribute="leading" constant="50" id="dzt-rK-dug"/>
                                                 <constraint firstItem="csK-jx-hHJ" firstAttribute="centerY" secondItem="Ne9-lr-zXV" secondAttribute="centerY" id="fv4-lK-guA"/>
                                                 <constraint firstItem="BPB-sk-0Qw" firstAttribute="centerY" secondItem="mT9-kb-CNe" secondAttribute="centerY" id="nqD-RZ-nik"/>
-                                                <constraint firstItem="csK-jx-hHJ" firstAttribute="leading" secondItem="Ne9-lr-zXV" secondAttribute="trailing" constant="52" id="pC1-RO-v74"/>
+                                                <constraint firstItem="csK-jx-hHJ" firstAttribute="leading" secondItem="Ne9-lr-zXV" secondAttribute="trailing" constant="16" id="pC1-RO-v74"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <size key="customSize" width="402" height="128"/>
+                                        <connections>
+                                            <outlet property="companyIconImageView" destination="bc7-fD-73J" id="Cze-Sw-5Qv"/>
+                                            <outlet property="companyNameLabel" destination="bl3-g6-NUv" id="WYP-L6-rQk"/>
+                                            <outlet property="companyPriceLabel" destination="Ne9-lr-zXV" id="Arl-ay-gLR"/>
+                                            <outlet property="diffLabel" destination="csK-jx-hHJ" id="WK5-XW-87P"/>
+                                            <outlet property="rankLabel" destination="BPB-sk-0Qw" id="MTB-cF-8Pg"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
