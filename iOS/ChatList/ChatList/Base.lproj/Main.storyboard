@@ -20,14 +20,14 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="CdD-4c-ymS">
                                 <rect key="frame" x="0.0" y="44" width="428" height="848"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="I0z-XM-0bc">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="I0z-XM-0bc">
                                     <size key="itemSize" width="428" height="131"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Cby-v1-ULS">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ChatListCollectionViewCell" id="Cby-v1-ULS" customClass="ChatListCollectionViewCell" customModule="ChatList" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="428" height="131"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="PHK-iD-JbD">
@@ -53,8 +53,8 @@
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="대화내용" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4i8-31-4a5">
-                                                    <rect key="frame" x="116" y="57.666666666666657" width="63" height="22"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" text="대화내용" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4i8-31-4a5">
+                                                    <rect key="frame" x="115.99999999999999" y="57.666666666666664" width="62.333333333333329" height="21.666666666666664"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -73,6 +73,12 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="428" height="131"/>
+                                        <connections>
+                                            <outlet property="chatLabel" destination="4i8-31-4a5" id="dRS-wt-WH6"/>
+                                            <outlet property="dateLabel" destination="dM6-Fl-o0B" id="qI4-cP-WRB"/>
+                                            <outlet property="nameLabel" destination="fAj-UQ-bPA" id="OIo-XQ-m8Y"/>
+                                            <outlet property="thumbnail" destination="tgM-e3-lfW" id="D4m-Sa-1bA"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -86,6 +92,9 @@
                             <constraint firstItem="CdD-4c-ymS" firstAttribute="leading" secondItem="IVt-hL-poe" secondAttribute="leading" id="gLi-aq-kAX"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="CdD-4c-ymS" id="FiW-FR-g9P"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bXZ-ih-qtw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
