@@ -20,7 +20,7 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="UZx-Sy-LXA">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0hI-ee-DBZ">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0hI-ee-DBZ">
                                     <size key="itemSize" width="169" height="202"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -74,6 +74,9 @@
                             <constraint firstItem="UZx-Sy-LXA" firstAttribute="top" secondItem="NWo-qP-Ecv" secondAttribute="top" id="vrB-6M-Xwg"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="UZx-Sy-LXA" id="EHm-Li-bps"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6oB-vW-uO8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
