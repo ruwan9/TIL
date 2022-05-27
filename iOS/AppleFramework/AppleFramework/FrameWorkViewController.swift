@@ -19,6 +19,9 @@ class FrameWorkViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
         
+        // navigationcontroller 관리
+        navigationController?.navigationBar.topItem?.title = "🐸 Apple Frameworks"
+        
         // estimatedItemSize 정의
         if let flowlayout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             flowlayout.estimatedItemSize = .zero
@@ -62,5 +65,14 @@ extension FrameWorkViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 10
+    }
+}
+
+// 클릭 이벤트 감지
+extension FrameWorkViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let framework = list[indexPath.item]
+        
+        print(">>> selected: \(framework.name)")
     }
 }
