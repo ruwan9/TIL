@@ -8,9 +8,9 @@ import Edit from "./pages/Edit";
 import Home from "./pages/Home";
 import New from "./pages/New";
 
-// COMPONENTS
-import MyButton from "./components/MyButton";
-import MyHeader from "./components/MyHeader";
+// // COMPONENTS
+// import MyButton from "./components/MyButton";
+// import MyHeader from "./components/MyHeader";
 
 // REDUCER
 const reducer = (state, action) => {
