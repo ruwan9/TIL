@@ -1,6 +1,6 @@
 # UITapBarController
 
-![ezgif.com-gif-maker (1)](README.assets/ezgif.com-gif-maker (1).gif)
+![instaSearch](README.assets/instaSearch.gif)
 
 
 

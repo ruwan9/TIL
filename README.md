@@ -33,5 +33,4 @@
 - [StockRank](https://github.com/ruwan9/TIL/tree/main/iOS/StockRank)
 
 - [ChatList](https://github.com/ruwan9/TIL/tree/main/iOS/ChatList)
-
-  
+- [InstaSearch](https://github.com/ruwan9/TIL/tree/main/iOS/InstaSearchView)
